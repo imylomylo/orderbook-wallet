@@ -112,19 +112,24 @@
           to: '/',
         },
         {
-          icon: 'mdi-account',
-          title: 'user',
-          to: '/pages/user',
-        },
-        {
-          title: 'rtables',
-          icon: 'mdi-clipboard-outline',
-          to: '/tables/regular-tables',
-        },
-        {
           title: 'wallets',
-          icon: 'mdi-clipboard-outline',
+          icon: 'mdi-animation',
           to: '/wallets',
+        },
+        {
+          title: 'orders',
+          icon: 'mdi-clipboard-outline',
+          to: '/orders',
+        },
+        {
+          icon: 'mdi-menu-open',
+          title: 'orderbook',
+          to: '/pages/orderbook',
+        },
+        {
+          icon: 'mdi-alarm-check',
+          title: 'recentswaps',
+          to: '/pages/recent-swaps',
         },
         {
           title: 'typography',
@@ -135,11 +140,6 @@
           title: 'icons',
           icon: 'mdi-chart-bubble',
           to: '/components/icons',
-        },
-        {
-          title: 'google',
-          icon: 'mdi-map-marker',
-          to: '/maps/google-maps',
         },
         {
           title: 'notifications',

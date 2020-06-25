@@ -24,6 +24,16 @@ export default new Router({
           component: () => import('@/views/dashboard/pages/UserProfile'),
         },
         {
+          name: 'Orderbook',
+          path: 'pages/orderbook',
+          component: () => import('@/views/dashboard/pages/Orderbook'),
+        },
+        {
+          name: 'Recent Swaps',
+          path: 'pages/recent-swaps',
+          component: () => import('@/views/dashboard/pages/RecentSwaps'),
+        },
+        {
           name: 'Notifications',
           path: 'components/notifications',
           component: () => import('@/views/dashboard/component/Notifications'),
@@ -48,6 +58,11 @@ export default new Router({
           name: 'Wallets',
           path: 'wallets',
           component: () => import('@/views/dashboard/tables/Wallets'),
+        },
+        {
+          name: 'Orders',
+          path: 'orders',
+          component: () => import('@/views/dashboard/tables/Orders'),
         },
         // Maps
         {

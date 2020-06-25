@@ -20,8 +20,10 @@ import './plugins/chartist'
 import './plugins/vee-validate'
 import vuetify from './plugins/vuetify'
 import i18n from './i18n'
+import AsyncComputed from 'vue-async-computed'
 
 Vue.config.productionTip = false
+Vue.use(AsyncComputed)
 
 new Vue({
   router,

@@ -54,11 +54,11 @@
           </template>
 
           <h4 class="card-title font-weight-light mt-2 ml-2">
-            Website Views
+            Dollars per hour
           </h4>
 
           <p class="d-inline-flex font-weight-light ml-2 mt-1">
-            Last Campaign Performance
+            Dollar Value Traded By Hour
           </p>
 
           <template v-slot:actions>
@@ -121,7 +121,7 @@
           </template>
 
           <h4 class="card-title font-weight-light mt-2 ml-2">
-            Daily Sales
+            Swaps by hour
           </h4>
 
           <p class="d-inline-flex font-weight-light ml-2 mt-1">
@@ -132,7 +132,7 @@
               mdi-arrow-up
             </v-icon>
             <span class="green--text">55%</span>&nbsp;
-            increase in today's sales
+            increase in today's swaps
           </p>
 
           <template v-slot:actions>
@@ -195,11 +195,11 @@
           </template>
 
           <h3 class="card-title font-weight-light mt-2 ml-2">
-            Completed Tasks
+            Total Order Balance
           </h3>
 
           <p class="d-inline-flex font-weight-light ml-2 mt-1">
-            Last Last Campaign Performance
+            Total Value Of Orders By Hour
           </p>
 
           <template v-slot:actions>
@@ -209,7 +209,7 @@
             >
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
+            <span class="caption grey--text font-weight-light">last order completed 26 minutes ago</span>
           </template>
         </base-material-chart-card>
       </v-col>
@@ -220,10 +220,10 @@
         lg="3"
       >
         <base-material-stats-card
-          color="info"
-          icon="mdi-twitter"
-          title="Followers"
-          value="+245"
+          color="orange"
+          icon="BTC"
+          title="Bitcoin"
+          value="0.245"
           sub-icon="mdi-clock"
           sub-text="Just Updated"
         />
@@ -236,11 +236,11 @@
       >
         <base-material-stats-card
           color="primary"
-          icon="mdi-poll"
-          title="Website Visits"
-          value="75.521"
+          icon="ETH"
+          title="Ethereum"
+          value="5.521"
           sub-icon="mdi-tag"
-          sub-text="Tracked from Google Analytics"
+          sub-text="No orders currently"
         />
       </v-col>
 
@@ -251,11 +251,11 @@
       >
         <base-material-stats-card
           color="success"
-          icon="mdi-store"
-          title="Revenue"
-          value="$ 34,245"
+          icon="KMD"
+          title="Komodo"
+          value="4245.58777"
           sub-icon="mdi-calendar"
-          sub-text="Last 24 Hours"
+          sub-text="Most traded"
         />
       </v-col>
 
@@ -265,13 +265,13 @@
         lg="3"
       >
         <base-material-stats-card
-          color="orange"
-          icon="mdi-sofa"
-          title="Bookings"
-          value="184"
+          color="info"
+          icon="VRSC"
+          title="Verus"
+          value="18407"
           sub-icon="mdi-alert"
           sub-icon-color="red"
-          sub-text="Get More Space..."
+          sub-text="Total orders exceed 80% wallet balance"
         />
       </v-col>
 
@@ -285,7 +285,7 @@
         >
           <template v-slot:heading>
             <div class="display-2 font-weight-light">
-              Employees Stats
+              Recent Swaps
             </div>
 
             <div class="subtitle-1 font-weight-light">
@@ -315,24 +315,24 @@
               <span
                 class="subheading font-weight-light mx-3"
                 style="align-self: center"
-              >Tasks:</span>
+              >Notes:</span>
               <v-tab class="mr-3">
                 <v-icon class="mr-2">
                   mdi-bug
                 </v-icon>
-                Bugs
+                Prices
               </v-tab>
               <v-tab class="mr-3">
                 <v-icon class="mr-2">
                   mdi-code-tags
                 </v-icon>
-                Website
+                Strategies
               </v-tab>
               <v-tab>
                 <v-icon class="mr-2">
                   mdi-cloud
                 </v-icon>
-                Server
+                News
               </v-tab>
             </v-tabs>
           </template>
@@ -395,12 +395,13 @@
 <script>
   export default {
     name: 'DashboardDashboard',
+    // props: ['pageProps'],
 
     data () {
       return {
         dailySalesChart: {
           data: {
-            labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+            labels: ['11', '12', '13', '14', '15', '16', '17'],
             series: [
               [12, 17, 7, 17, 23, 18, 38],
             ],
@@ -421,17 +422,17 @@
         },
         dataCompletedTasksChart: {
           data: {
-            labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
+            labels: ['11', '12', '13', '14', '15', '16', '17'],
             series: [
-              [230, 750, 450, 300, 280, 240, 200, 190],
+              [1230, 1750, 1450, 1300, 1280, 1240, 1200],
             ],
           },
           options: {
             lineSmooth: this.$chartist.Interpolation.cardinal({
               tension: 0,
             }),
-            low: 0,
-            high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+            low: 1000,
+            high: 2000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
               top: 0,
               right: 0,
@@ -442,9 +443,9 @@
         },
         emailsSubscriptionChart: {
           data: {
-            labels: ['Ja', 'Fe', 'Ma', 'Ap', 'Mai', 'Ju', 'Jul', 'Au', 'Se', 'Oc', 'No', 'De'],
+            labels: ['11', '12', '13', '14', '15', '16', '17', '18'],
             series: [
-              [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
+              [542, 443, 320, 780, 553, 453, 326, 756],
 
             ],
           },
@@ -475,88 +476,67 @@
         headers: [
           {
             sortable: false,
-            text: 'ID',
+            text: 'Trade UUID',
             value: 'id',
           },
           {
             sortable: false,
-            text: 'Name',
+            text: 'My COIN',
             value: 'name',
           },
           {
             sortable: false,
-            text: 'Salary',
+            text: 'My Amount',
             value: 'salary',
             align: 'right',
           },
           {
             sortable: false,
-            text: 'Country',
+            text: 'Other COIN',
             value: 'country',
             align: 'right',
           },
           {
             sortable: false,
-            text: 'City',
+            text: 'Other Amount',
             value: 'city',
             align: 'right',
           },
         ],
         items: [
           {
-            id: 1,
-            name: 'Dakota Rice',
-            country: 'Niger',
-            city: 'Oud-Tunrhout',
-            salary: '$35,738',
+            id: '7363ac42-ec9e-4669-88e6-c45fecbc6847',
+            name: 'KMD',
+            country: 'MORTY',
+            city: '0.1',
+            salary: '0.05',
           },
           {
-            id: 2,
-            name: 'Minerva Hooper',
-            country: 'Curaçao',
-            city: 'Sinaai-Waas',
-            salary: '$23,738',
-          },
-          {
-            id: 3,
-            name: 'Sage Rodriguez',
-            country: 'Netherlands',
-            city: 'Overland Park',
-            salary: '$56,142',
-          },
-          {
-            id: 4,
-            name: 'Philip Chanley',
-            country: 'Korea, South',
-            city: 'Gloucester',
-            salary: '$38,735',
-          },
-          {
-            id: 5,
-            name: 'Doris Greene',
-            country: 'Malawi',
-            city: 'Feldkirchen in Kārnten',
-            salary: '$63,542',
+            id: 'b0250c62-39d8-430a-8236-13b0887fe98a',
+            name: 'KMD',
+            country: 'MORTY',
+            city: '0.1',
+            salary: '0.5',
           },
         ],
         tabs: 0,
         tasks: {
           0: [
             {
-              text: 'Sign contract for "What are conference organizers afraid of?"',
+              text: 'KMD price is 0.00006777 Monday morning',
               value: true,
             },
             {
-              text: 'Lines From Great Russian Literature? Or E-mails From My Boss?',
+              text: 'Spread is 10% and 1 buy orders',
               value: false,
             },
             {
-              text: 'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit',
-              value: false,
-            },
-            {
-              text: 'Create 4 Invisible User Experiences you Never Knew About',
+              text: 'Create 4 orders if price hits 7000 sats KMD',
               value: true,
+            },
+            {
+              text: 'Create 2 orders if price hits 5500 sats KMD',
+              value: false,
             },
           ],
           1: [

@@ -2,7 +2,7 @@
   <section class="mb-12 text-center">
     <h1
       class="font-weight-light mb-2 headline"
-      v-text="`Vuetify ${heading}`"
+      v-text="`Orderbook ${heading}`"
     />
 
     <span

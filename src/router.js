@@ -44,6 +44,11 @@ export default new Router({
           path: 'tables/regular-tables',
           component: () => import('@/views/dashboard/tables/RegularTables'),
         },
+        {
+          name: 'Wallets',
+          path: 'wallets',
+          component: () => import('@/views/dashboard/tables/Wallets'),
+        },
         // Maps
         {
           name: 'Google Maps',

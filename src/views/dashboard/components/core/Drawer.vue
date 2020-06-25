@@ -122,6 +122,11 @@
           to: '/tables/regular-tables',
         },
         {
+          title: 'wallets',
+          icon: 'mdi-clipboard-outline',
+          to: '/wallets',
+        },
+        {
           title: 'typography',
           icon: 'mdi-format-font',
           to: '/components/typography',

@@ -21,7 +21,7 @@
     asyncComputed: {
       pageProps () {
         if (this.$route.name === 'Dashboard') { return { something: 'dashboard page props' } }
-        if (this.$route.name === 'Regular Tables') {
+        if (this.$route.name === 'Wallets') {
           mm2Middleware.initWallets().then(response => {
             let wallets = {}
             wallets = response.data.result

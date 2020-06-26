@@ -99,6 +99,7 @@
 </template>
 <script>
   import { EventBus } from '../../../event-bus.js'
+  import { mapMutations, mapState } from 'vuex'
   import mm2 from '../components/lib/mm2MiddlewareClient.js'
 
   export default {
@@ -112,6 +113,7 @@
       }
     },
     computed: {
+      ...mapState(['storewallets']),
       fundedwallets () {
         const result = {}
         for (const i in this.wallets) {
@@ -140,6 +142,9 @@
       })
     },
     methods: {
+      ...mapMutations({
+        setStoreWallets: 'SET_STORE_WALLETS',
+      }),
       // emitClickEvent () {
       cancelOrder (uuid = 'test') {
         // Send the event on a channel (requestCancelOrder) with a payload (the uuid)
@@ -159,6 +164,7 @@
                 console.log('All updated')
                 this.hideZeroDisable = false
               }
+              this.setStoreWallets(this.wallets)
             })
             .catch(function (e) {
               console.log('update balance error' + e)

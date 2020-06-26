@@ -4,7 +4,6 @@
     fluid
     tag="section"
   >
-
     <v-row>
       <v-col
         cols="12"
@@ -37,6 +36,9 @@
 
 <script>
   export default {
+    created () {
+      console.log('Recent swaps store test' + JSON.stringify(this.$store.state.storewallets, null, 2))
+    },
     data () {
       return {
         asksHeaders: [

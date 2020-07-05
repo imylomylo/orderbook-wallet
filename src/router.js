@@ -76,6 +76,12 @@ export default new Router({
           path: 'upgrade',
           component: () => import('@/views/dashboard/Upgrade'),
         },
+        // atomicDEX
+        {
+          name: 'atomicDEX',
+          path: 'atomic-dex',
+          component: () => import('@/views/dashboard/AtomicDEX'),
+        },
       ],
     },
   ],

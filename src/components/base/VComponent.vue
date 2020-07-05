@@ -10,13 +10,13 @@
     >
       Please checkout the
       <a
-        :href="`https://vuetifyjs.com/${link}`"
+        :href="`https://developers.komodoplatform.com/basic-docs/atomicdex/atomicdex-api.html`"
         rel="noopener"
         target="_blank"
         class="secondary--text"
         style="text-decoration:none;"
       >
-        full documentation
+        API documentation
       </a>
     </span>
   </section>

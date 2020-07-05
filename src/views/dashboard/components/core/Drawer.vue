@@ -79,9 +79,9 @@
     <template v-slot:append>
       <base-item
         :item="{
-          title: $t('upgrade'),
+          title: $t('atomicdex'),
           icon: 'mdi-package-up',
-          to: '/upgrade',
+          to: '/atomic-dex',
         }"
       />
     </template>
@@ -130,21 +130,6 @@
           icon: 'mdi-alarm-check',
           title: 'recentswaps',
           to: '/pages/recent-swaps',
-        },
-        {
-          title: 'typography',
-          icon: 'mdi-format-font',
-          to: '/components/typography',
-        },
-        {
-          title: 'icons',
-          icon: 'mdi-chart-bubble',
-          to: '/components/icons',
-        },
-        {
-          title: 'notifications',
-          icon: 'mdi-bell',
-          to: '/components/notifications',
         },
       ],
     }),

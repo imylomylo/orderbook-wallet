@@ -65,8 +65,8 @@
               <td>{{ row.ticker }}</td>
               <td>{{ row.balance }}</td>
               <td>{{ row.address }}</td>
-              <td>abc</td>
-              <td>def</td>
+              <td>Not Implemented</td>
+              <td>Not Implemented</td>
             </tr>
           </template>
           <template v-else>
@@ -77,8 +77,8 @@
               <td>{{ row.ticker }}</td>
               <td>{{ row.balance }}</td>
               <td>{{ row.address }}</td>
-              <td>abc</td>
-              <td>def</td>
+              <td>Not Implemented</td>
+              <td>Not Implemented</td>
             </tr>
           </template>
         </tbody>

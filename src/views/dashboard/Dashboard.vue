@@ -394,7 +394,7 @@
 
 <script>
   export default {
-    name: 'DashboardDashboard',
+    name: 'Dashboard',
     // props: ['pageProps'],
 
     data () {

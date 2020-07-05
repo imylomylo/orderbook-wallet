@@ -9,6 +9,7 @@ export default new Vuex.Store({
     barImage: 'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg',
     drawer: null,
     storewallets: {},
+    storeorders: {},
   },
   mutations: {
     SET_BAR_IMAGE (state, payload) {
@@ -19,6 +20,9 @@ export default new Vuex.Store({
     },
     SET_STORE_WALLETS (state, payload) {
       state.storewallets = payload
+    },
+    SET_STORE_ORDERS (state, payload) {
+      state.storeorders = payload
     },
   },
   actions: {

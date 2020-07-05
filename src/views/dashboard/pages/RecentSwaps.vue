@@ -19,15 +19,77 @@
             </div>
 
             <div class="subtitle-1 font-weight-light">
-              New employees on 15th September, 2016
+              This only fetches last 10 swap history for now
             </div>
           </template>
+          <!--
+This data table makes this really easy for sorting if required, just change the headers & items
           <v-card-text>
             <v-data-table
               :headers="headers"
               :items="items"
             />
           </v-card-text>
+-->
+          <div v-if="recentSwaps.swaps !== undefined && recentSwaps.swaps.length > 0">
+            <div>
+              <v-simple-table>
+                <thead>
+                  <tr>
+                    <th class="text-left">
+                      Type
+                    </th>
+                    <th class="text-left">
+                      My Coin
+                    </th>
+                    <th class="text-left">
+                      My Amount
+                    </th>
+                    <th class="text-left">
+                      Other Coin
+                    </th>
+                    <th class="text-left">
+                      Other Amount
+                    </th>
+                    <th class="text-left">
+                      Trade UUID
+                    </th>
+                    <th class="text-left">
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    v-for="row in recentSwaps.swaps"
+                    :key="row.uuid"
+                  >
+                    <td>{{ row.type }}</td>
+                    <td>{{ row.my_info.my_coin }}</td>
+                    <td>{{ row.my_info.my_amount }}</td>
+                    <td>{{ row.my_info.other_coin }}</td>
+                    <td>{{ row.my_info.other_amount }}</td>
+                    <td>{{ row.uuid }}</td>
+                    <td>
+                      <v-chip
+                        class="ma-2"
+                        color="blue"
+                        dark
+                        @click="showDetails(row.uuid)"
+                      >
+                        <v-icon left>
+                          mdi-server-plus
+                        </v-icon>Details
+                      </v-chip>
+                    </td>
+                  </tr>
+                </tbody>
+              </v-simple-table>
+            </div>
+          </div>
+          <div v-else>
+            Nothing to show yet
+          </div>
         </base-material-card>
       </v-col>
     </v-row>
@@ -35,12 +97,12 @@
 </template>
 
 <script>
+  import { EventBus } from '../../../event-bus.js'
+
   export default {
-    created () {
-      console.log('Recent swaps store test' + JSON.stringify(this.$store.state.storewallets, null, 2))
-    },
     data () {
       return {
+        // below is if using data tables instead of simple tables, the following are needed
         asksHeaders: [
           {
             text: 'Price (rel)',
@@ -106,8 +168,18 @@
             city: '0.1',
             salary: '0.5',
           },
+          // above is for data tables instead of simple tables
         ],
+        recentSwaps: [],
       }
+    },
+    created () {
+      // store test works
+      console.log('Recent swaps store test (wallets)' + JSON.stringify(this.$store.state.storewallets, null, 2))
+      EventBus.$on('initRecentSwaps', recentSwaps => {
+        console.log('page recent swaps -> Init Recent Swaps')
+        this.recentSwaps = recentSwaps
+      })
     },
   }
 </script>

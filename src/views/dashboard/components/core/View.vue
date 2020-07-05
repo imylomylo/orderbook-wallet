@@ -31,6 +31,28 @@
           }).catch(reason => {
             return { something: 'error' }
           })
+        }
+        if (this.$route.name === 'Orders') {
+          mm2Middleware.getMyOrders().then(response => {
+            let myOrders = []
+            console.log('View => init orders')
+            // because working with an object of objects in js sucks, convert to array
+            myOrders = Object.values(response.data.result.maker_orders)
+            EventBus.$emit('initOrders', myOrders)
+            return { something: 'orders loaded' }
+          }).catch(reason => {
+            return { something: 'error' }
+          })
+        }
+        if (this.$route.name === 'Recent Swaps') {
+          mm2Middleware.getRecentSwaps().then(response => {
+            let recentSwaps = []
+            recentSwaps = response.data.result
+            EventBus.$emit('initRecentSwaps', recentSwaps)
+            return { something: 'recent swaps loaded' }
+          }).catch(reason => {
+            return { something: 'error' }
+          })
         } else { return { something: 'else' } }
       },
     },

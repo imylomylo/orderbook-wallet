@@ -26,10 +26,8 @@
             <v-data-table
               dense
               :sort-by="['price']"
-              :sort-desc="[true]"
-              disable-pagination
-              hide-default-footer
-              :items-per-page="10"
+              :sort-desc="[false]"
+              :items-per-page="5"
               :headers="asksHeaders"
               :items="marketOrders.asks"
             >
@@ -75,9 +73,7 @@
               dense
               :sort-by="['price']"
               :sort-desc="[true]"
-              disable-pagination
-              hide-default-footer
-              :items-per-page="10"
+              :items-per-page="5"
               :headers="bidsHeaders"
               :items="marketOrders.bids"
             >

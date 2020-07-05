@@ -55,7 +55,7 @@
           })
         }
         if (this.$route.name === 'Orderbook') {
-          mm2Middleware.getMarket('KMD', 'BTC').then(response => {
+          mm2Middleware.getMarket('KMD', 'VRSC').then(response => {
             const marketdataraw = response.data
             EventBus.$emit('initMarket', marketdataraw)
             return { something: 'market raw orderbook loaded' }

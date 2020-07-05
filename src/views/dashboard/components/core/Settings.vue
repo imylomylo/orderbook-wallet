@@ -110,7 +110,6 @@
           <div>
             <strong class="mb-3 d-inline-block">THANK YOU!</strong>
           </div>
-
         </v-card-text>
       </v-card>
     </v-menu>

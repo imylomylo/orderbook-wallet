@@ -12,8 +12,13 @@ export function getRecentSwaps () {
   return mm2MiddlewareClient.recentSwaps()
 }
 
+export function getMarket (base, rel) {
+  return mm2MiddlewareClient.getMarket(base, rel)
+}
+
 export default {
   initWallets,
   getMyOrders,
   getRecentSwaps,
+  getMarket,
 }

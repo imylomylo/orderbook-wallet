@@ -6,6 +6,16 @@ Redesign of the [Orderbook.live](https://orderbook.live) demo of how to use the 
 # Tutorial
 [Part 2](https://ikomodo.com/atomicdex-orderbook-tutorial-part-2/) of the tutorial goes into how to deploy it with docker. In [part 1](https://ikomodo.com/atomicdex-orderbook-docker-tutorial/) goes into basic setup and links to the [middleware docs](https://beta.orderbook.live/docs/) to interact with the atomicDEX API. Middleware is based around this [simple API wrapper in nodejs](https://github.com/imylomylo/node-cors-server/blob/master/mm2-middleware.js).
 
+# Updated GUI Demo
+It was a simple porting of some data from the [first version of this web app](https://github.com/imylomylo/dev-mm2-web) which is the version used in the tutorials.  The unfinished update to this GUI is viewable at [https://atomicdex.orderbook.live](https://atomicdex.orderbook.live)
+
+
+```
+This project will probably be finished in Q1 2021 when atomicDEX API is released (release candidate & full release) by the Komodo Platform team.
+
+```
+
+
 
 # [Vuetify Material Dashboard](https://www.creative-tim.com/product/vuetify-material-dashboard?ref=vtymdp-readme) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/share?url=https%3A%2F%2Fwww.creative-tim.com%2Fvuetify-material-dashboard&text=Vuetify%20Material%20Dashboard%20PRO%20by%20Creative%20Tim&via=CreativeTim&hashtags=vuejs%20%23vuex%20%23vuetify%20%23material)
 
